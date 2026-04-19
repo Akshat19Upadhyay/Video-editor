@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rachit Edits | Video Editor Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio website for a video editor showcasing long-form videos, shorts, and contact details."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <nav class="navbar container">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <img id="navProfilePhoto" class="brand-photo" src="" alt="Editor profile photo">
+          <div>
+            <span class="brand-name" id="navName">Rachit</span>
+            <span class="brand-role">Video Editor</span>
+          </div>
+        </a>
+        <div class="nav-links">
+          <a href="#videos">Videos</a>
+          <a href="#shorts">Shorts</a>
+          <a href="#contact">Contact</a>
+          <a class="admin-link" href="./admin.html">Admin Panel</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Cinematic Storytelling for Modern Brands & Creators</p>
+          <h1 id="profileName">Rachit</h1>
+          <p class="tagline" id="profileTagline">
+            Turning raw footage into scroll-stopping stories that people remember.
+          </p>
+          <p class="experience" id="profileExperience">3 years of editing experience</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#videos">See My Work</a>
+            <a class="button secondary" href="#contact">Let's Work Together</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-ring">
+            <img id="heroProfilePhoto" class="hero-photo" src="" alt="Video editor portrait">
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Years crafting edits that hold attention</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section container" id="videos">
+        <div class="section-heading">
+          <p class="section-kicker">Featured Work</p>
+          <h2>Videos</h2>
+          <p>Showcase long-form edits, reels, podcasts, and client projects through embedded YouTube videos.</p>
+        </div>
+        <div id="videosGrid" class="video-grid"></div>
+      </section>
+
+      <section class="content-section container" id="shorts">
+        <div class="section-heading">
+          <p class="section-kicker">Quick Impact</p>
+          <h2>Shorts</h2>
+          <p>Highlight short-form edits built for attention, retention, and fast storytelling.</p>
+        </div>
+        <div id="shortsGrid" class="video-grid"></div>
+      </section>
+
+      <section class="content-section container contact-section" id="contact">
+        <div class="section-heading">
+          <p class="section-kicker">Get In Touch</p>
+          <h2>Contact</h2>
+          <p>Reach out for freelance projects, collaborations, or long-term editing work.</p>
+        </div>
+        <div class="contact-card">
+          <a id="whatsappLink" class="contact-item" href="#" target="_blank" rel="noreferrer">
+            <span class="contact-label">WhatsApp</span>
+            <span id="contactWhatsapp">+91 98765 43210</span>
+          </a>
+          <a id="emailLink" class="contact-item" href="#">
+            <span class="contact-label">Email</span>
+            <span id="contactEmail">rachit.editor@example.com</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

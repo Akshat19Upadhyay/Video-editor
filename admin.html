@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | Rachit Edits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="admin-body">
+  <main class="admin-shell container">
+    <section class="admin-auth card admin-gate">
+      <div>
+        <p class="section-kicker">Editor Access</p>
+        <h1>Admin Login</h1>
+        <p id="authIntro">
+          Enter the editor password to unlock the admin panel.
+        </p>
+      </div>
+
+      <form id="passwordLoginForm" class="password-login" hidden>
+        <label>
+          <span>Admin password</span>
+          <input id="passwordInput" name="password" type="password" placeholder="Enter secure password" autocomplete="current-password">
+        </label>
+        <button class="button primary" type="submit">Unlock Admin</button>
+      </form>
+      <p id="authStatus" class="status-text">Checking configuration...</p>
+      <a class="button secondary gate-back-link" href="./index.html">Back to Portfolio</a>
+    </section>
+
+    <section id="adminWorkspace" class="admin-workspace" hidden>
+      <div class="admin-topbar">
+        <div>
+          <p class="section-kicker">Content Manager</p>
+          <h1>Admin Panel</h1>
+          <p class="admin-intro">
+            Update the profile, featured videos, shorts, and contact details from here.
+          </p>
+        </div>
+        <div class="admin-workspace-actions">
+          <button id="workspaceSignOutButton" class="button secondary" type="button">Sign Out</button>
+          <a class="button secondary" href="./index.html">Back to Portfolio</a>
+        </div>
+      </div>
+
+      <form id="adminForm" class="admin-form">
+        <section class="card">
+          <h2>Profile Section</h2>
+          <div class="field-grid">
+            <label>
+              <span>Name</span>
+              <input id="nameInput" name="name" type="text" placeholder="Editor name" required>
+            </label>
+            <label>
+              <span>Experience</span>
+              <input id="experienceInput" name="experience" type="text" placeholder="3 years of editing experience" required>
+            </label>
+          </div>
+          <label>
+            <span>Tagline</span>
+            <textarea id="taglineInput" name="tagline" rows="3" placeholder="Eye-catching tagline" required></textarea>
+          </label>
+          <label>
+            <span>Profile photo URL</span>
+            <input id="photoInput" name="photo" type="url" placeholder="https://example.com/photo.jpg" required>
+          </label>
+        </section>
+
+        <section class="card">
+          <div class="admin-section-heading">
+            <div>
+              <h2>Videos</h2>
+              <p>Add YouTube videos with title and link.</p>
+            </div>
+            <button id="addVideoButton" class="button secondary" type="button">Add Video</button>
+          </div>
+          <div id="videosEditorList" class="editor-list"></div>
+        </section>
+
+        <section class="card">
+          <div class="admin-section-heading">
+            <div>
+              <h2>Shorts</h2>
+              <p>Add YouTube shorts with title and link.</p>
+            </div>
+            <button id="addShortButton" class="button secondary" type="button">Add Short</button>
+          </div>
+          <div id="shortsEditorList" class="editor-list"></div>
+        </section>
+
+        <section class="card">
+          <h2>Contact</h2>
+          <div class="field-grid">
+            <label>
+              <span>WhatsApp number</span>
+              <input id="whatsappInput" name="whatsapp" type="text" placeholder="+91 98765 43210" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input id="emailInput" name="email" type="email" placeholder="you@example.com" required>
+            </label>
+          </div>
+        </section>
+
+        <div class="admin-actions">
+          <button class="button primary" type="submit">Save Changes</button>
+          <p id="saveStatus" class="status-text"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <template id="mediaItemTemplate">
+    <article class="media-item">
+      <div class="field-grid">
+        <label>
+          <span>Title</span>
+          <input class="media-title" type="text" placeholder="Project title" required>
+        </label>
+        <label>
+          <span>YouTube URL</span>
+          <input class="media-url" type="url" placeholder="https://www.youtube.com/watch?v=..." required>
+        </label>
+      </div>
+      <button class="button ghost remove-item" type="button">Remove</button>
+    </article>
+  </template>
+
+  <script type="module" src="./admin.js"></script>
+</body>
+</html>

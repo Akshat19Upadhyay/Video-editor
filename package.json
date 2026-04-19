@@ -1,0 +1,9 @@
+{
+  "name": "rachit-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio site with a built-in admin backend and password-protected editor access.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

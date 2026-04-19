@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: rachit-portfolio
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: portfolio-data
+      mountPath: /var/data
+      sizeGB: 1
